@@ -1,6 +1,6 @@
 import { IListItem, ListItem } from "../list-item";
 
-interface IItems {
+export interface IItems {
   items: IListItem[];
 }
 
@@ -8,8 +8,10 @@ export const List = ({ items }: IItems) => {
   return (
     <>
       <div className="list-container">
-        <h4 className="list--title">Actions to be completed</h4>
-        {items.map(({ id, title, description, point, image }: IListItem) => (
+        <div className="list--title">
+          Actions to be completed
+        </div>
+        {items?.map(({ id, title, description, point, image }: IListItem) => (
           <div key={id} className="list--item">
             <ListItem
               title={title}

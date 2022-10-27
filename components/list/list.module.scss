@@ -1,0 +1,11 @@
+.list-container {
+    background-color: $bg-light-gray;
+    padding: 0px 16px 16px 16px;
+  }
+  .list--item {
+    margin-bottom: 16px;
+  }
+  .list--title {
+    @include QuicksandText(700, 16px, 24px, $txt-black);
+  }
+  

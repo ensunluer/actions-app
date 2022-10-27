@@ -8,7 +8,9 @@ export const List = ({ items }: IItems) => {
   return (
     <>
       <div className="list-container">
-        <h4 className="list--title">Actions to be completed</h4>
+        <div className="list--title">
+          Actions to be completed
+        </div>
         {items?.map(({ id, title, description, point, image }: IListItem) => (
           <div key={id} className="list--item">
             <ListItem

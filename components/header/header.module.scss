@@ -1,0 +1,25 @@
+.header-container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: $bg-active;
+  height: $header-height;
+}
+.header--logo {
+  margin-left: 16px;
+}
+.header--point {
+  background-color: $bg-black;
+  padding: 8px 16px;
+  border-radius: $card-border-radius;
+  margin-right: 16px;
+  a {
+    text-decoration: none;
+    @include QuicksandText(500, 14px, 20px, $bg-white);
+  }
+  span {
+    @include QuicksandText(700, 14px, 20px, $bg-white);
+  }
+}

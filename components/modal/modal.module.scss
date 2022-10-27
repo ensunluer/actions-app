@@ -1,0 +1,39 @@
+.modal-container {
+  background: $bg-white;
+  text-align: center;
+  max-width: 358px;
+  box-shadow: $card-drop-shadow;
+  border-radius: $card-border-radius;
+  padding: $card-padding;
+  gap: 32px;
+}
+
+.modal--content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  align-self: stretch;
+  gap: 16px;
+}
+
+.modal--title {
+  @include QuicksandText(700, 20px, 28px, $txt-black);
+}
+
+.modal--subTitle {
+  @include QuicksandText(500, 14px, 20px, $txt-black);
+}
+
+.modal--button {
+  background-color: $bg-black;
+  padding: 18px 0px;
+  border-radius: $btn-border-radius;
+  margin-top: 32px;
+  width: 100%;
+  border: none;
+  @include QuicksandText(700, 14px, 20px, $txt-white);
+  &:hover {
+    @include QuicksandText(700, 14px, 20px, $txt-gray);
+  }
+}

@@ -1,0 +1,32 @@
+.list-item-container {
+    display: flex;
+    background-color: $bg-white;
+    border-radius: $card-border-radius;
+    box-shadow: $item-drop-shadow;
+    padding: 16px;
+    cursor: pointer;
+    position: relative;
+    margin: 8px;
+  }
+  
+  .list-item--image {
+    width: 36px;
+    height: 36px;
+    position: relative;
+    margin-right: 8px;
+  }
+  
+  .list-item--title {
+    @include QuicksandText(700, 14px, 20px, $bg-black);
+  }
+  
+  .list-item--description {
+    @include QuicksandText(500, 12px, 16px, $txt-gray);
+  }
+  
+  .list-item--point {
+    margin-top: 16px;
+    margin-right: 16px;
+    @include MontserratText(700, 14px, 28px, $txt-green);
+  }
+  

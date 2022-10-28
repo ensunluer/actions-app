@@ -30,6 +30,10 @@ export const ContextProvider: React.FC<Children> = ({ children }) => {
     point,
     completed,
     isStarted,
+    setCurrentPoint,
+    setPoint,
+    setCompleted,
+    setIsStarted,
   };
 
   return <Context.Provider value={values}>{children}</Context.Provider>;

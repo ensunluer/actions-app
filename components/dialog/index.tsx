@@ -1,21 +1,42 @@
+//hook
+import { useContextHook } from "../../context/Context";
+//component
 import { Modal } from "../modal";
 
-export const Dialog = ({image}: any) => {
-  const completed = false;
+export const Dialog = ({ image, point, id }: any) => {
+  const {
+    completed,
+    setCompleted,
+    completedItem,
+    setCompletedItem,
+    setActions,
+    currentPoint,
+    setCurrentPoint,
+  } = useContextHook();
 
+  const handlePoint = () => {
+    const newPoint = point + currentPoint;
+    setCurrentPoint(newPoint);
+    setCompleted(true);
+
+    completedItem.push(id);
+    setCompletedItem(completedItem);
+  };
+  const handleClose = () => {
+    setActions(false);
+    setCompleted(false);
+  };
   return (
     <>
       <div className="dialog-container">
-        {completed ? (
+        {!completed ? (
           <Modal
             title="Phasellus et sem eget"
             subTitle="Lorem ipsum dolor sit amet consectetur"
             button="Earn points"
             image={image}
-            point={5000}
-            onClick={function (): void {
-              throw new Error("Function not implemented.");
-            }}
+            point={point}
+            onClick={handlePoint}
           />
         ) : (
           <Modal
@@ -24,9 +45,7 @@ export const Dialog = ({image}: any) => {
             Keep Up the great work!"
             button="Close"
             image="/Vector.svg"
-            onClick={function (): void {
-              throw new Error("Function not implemented.");
-            }}
+            onClick={handleClose}
           />
         )}
       </div>

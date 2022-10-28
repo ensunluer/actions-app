@@ -2,10 +2,10 @@
   background: $bg-white;
   text-align: center;
   max-width: 358px;
+  margin: 0px 16px 16px;
   box-shadow: $card-drop-shadow;
   border-radius: $card-border-radius;
   padding: $card-padding;
-  gap: 32px;
 }
 
 .modal--content {

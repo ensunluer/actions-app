@@ -18,8 +18,9 @@ export const Header = () => {
         />
       </Link>
       <div className="header--point">
-        <a href="/points">Points: </a>
-        <span>{currentPoint}</span>
+        <Link href="/points">
+          Points: <span>{currentPoint}</span>
+        </Link>
       </div>
     </header>
   );

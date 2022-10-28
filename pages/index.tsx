@@ -32,12 +32,6 @@ export default function HomePage({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>{isStarted ? <Home items={data} /> : <Intro />}</main>
-      {/* <main>
-        {data.map((item) => (
-          <Dialog image={item.image} />
-        ))}
-      </main> */}
-      <footer></footer>
     </div>
   );
 }

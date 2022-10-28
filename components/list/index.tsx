@@ -26,7 +26,9 @@ export const List = ({ items }: IItems) => {
           {items
             .filter((id) => id.id === singleId)
             .map(({ image, point, id }: IListItem) => (
-              <Dialog image={image} point={point} id={id} />
+              <div key={id}>
+                <Dialog image={image} point={point} id={id} />
+              </div>
             ))}
         </>
       ) : (
@@ -36,6 +38,7 @@ export const List = ({ items }: IItems) => {
             <div key={id} className="list--item">
               {completedItem.includes(id) ? (
                 <ListItem
+                  key={id}
                   title={title}
                   description={description}
                   point={"Completed"}
@@ -43,6 +46,7 @@ export const List = ({ items }: IItems) => {
                 />
               ) : (
                 <ListItem
+                  key={id}
                   title={title}
                   description={description}
                   point={`+${point}`}

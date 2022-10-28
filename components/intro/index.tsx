@@ -9,7 +9,7 @@ export const Intro = () => {
   const { setIsStarted } = useContextHook();
   return (
     <div className="intro-container">
-      <Image src="/logo.svg" alt="logo" width={233} height={56} />
+      <Image src="/Logo.svg" alt="logo" width={233} height={56} />
       <Image src="/cover.svg" alt="cover" width={300} height={272} />
       <Modal
         title={"Welcome to the TestCase APP!"}

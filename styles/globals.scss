@@ -2,6 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
 @import "./variables.scss";
 
+//page
+@import "../pages/points/points.module.scss";
+
 //components
 @import "../components/header/header.module.scss";
 @import "../components/intro/intro.module.scss";

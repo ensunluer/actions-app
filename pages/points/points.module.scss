@@ -1,0 +1,26 @@
+.point-container {
+  padding: 92px 0px 0px;
+  min-height: 100vh;
+  h3 {
+    margin: 0 16px 16px 16px;
+    @include QuicksandText(700, 16px, 24px, $txt-black);
+  }
+}
+
+.point--item {
+  display: flex;
+  justify-content: space-between;
+  background-color: $bg-white;
+  box-shadow: $item-drop-shadow;
+  margin-bottom: 1px;
+}
+
+.point--title {
+  margin: 16px 24px;
+  @include QuicksandText(500, 14px, 20px, $txt-black);
+}
+
+.point--point {
+  margin: 17px 24px;
+  @include MontserratText(700, 14px, 18px, $txt-green);
+}

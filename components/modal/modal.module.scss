@@ -25,6 +25,10 @@
   @include QuicksandText(500, 14px, 20px, $txt-black);
 }
 
+.modal--point {
+  @include MontserratText(700, 14px, 18px, $txt-green);
+}
+
 .modal--button {
   background-color: $bg-black;
   padding: 18px 0px;

@@ -1,9 +1,11 @@
+import Image from "next/image";
+
 interface IModal {
   image?: string;
   title: string;
   subTitle: string;
   button: string;
-  point?: string;
+  point?: number;
   onClick: () => void;
 }
 
@@ -17,7 +19,15 @@ export const Modal = ({
 }: IModal) => {
   return (
     <div className="modal-container">
-      {image && <div className="modal--image">{image}</div>}
+      {image && (
+        <Image
+          className="modal--image"
+          src={image}
+          alt={title}
+          width={72}
+          height={72}
+        />
+      )}
       {point && <div className="modal--point">{`+${point}`}</div>}
       <div className="modal--content">
         <div className="modal--title">{title}</div>

@@ -3,9 +3,7 @@ import { useContextHook } from "../../context/Context";
 import { Modal } from "../modal";
 
 export const Intro = () => {
-  const ctx = useContextHook();
-  //@ts-ignore
-  const isStart = ctx?.setIsStarted;
+  const { setIsStarted } = useContextHook();
   return (
     <div className="intro-container">
       <Image src="/logo.svg" alt="logo" width={233} height={56} />
@@ -16,7 +14,7 @@ export const Intro = () => {
           "We created this exercise to gain insights about your development skills."
         }
         button={"Start"}
-        onClick={() => isStart(true)}
+        onClick={() => setIsStarted(true)}
       />
     </div>
   );

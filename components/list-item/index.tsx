@@ -3,14 +3,15 @@ import Image from "next/image";
 export interface IListItem {
   id?: number;
   title: string;
-  description: string;
-  point: number;
+  description?: string;
+  point?: number | string;
   image: string;
   onClick?: () => void;
 }
 
 export const ListItem = (items: IListItem) => {
   const { title, description, point, image, onClick } = items;
+  
   return (
     <div className="list-item-container" onClick={onClick}>
       <div className="list-item--image">
@@ -21,7 +22,7 @@ export const ListItem = (items: IListItem) => {
         <div className="list-item--description">{description}</div>
       </div>
       <div className="list-item--point">
-        {point && <span>{`+${point}`}</span>}
+        {point && <span>{`${point}`}</span>}
       </div>
     </div>
   );

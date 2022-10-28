@@ -4,37 +4,30 @@ type Children = {
   children?: React.ReactNode;
 };
 
-type Context = {
-  point: number[];
-  currentPoint: number;
-  completed: boolean;
-  isStarted: boolean;
-};
-
-export const Context = createContext<Context | null>(null);
+export const Context = createContext<any | null>(null);
 
 export const ContextProvider: React.FC<Children> = ({ children }) => {
   const [currentPoint, setCurrentPoint] = useState<number>(0);
-  const [point, setPoint] = useState<number[]>([]);
   const [completed, setCompleted] = useState<boolean>(false);
+  const [completedItem, setCompletedItem] = useState<any[]>([]);
+  // const completedItem: number[] = [];
   const [isStarted, setIsStarted] = useState<boolean>(false);
-
-  useEffect(() => {
-    //@ts-ignore
-    const totalPoint = point.reduce((sum, item) => sum + item.points, 0);
-    setCurrentPoint(totalPoint);
-  }, [point]);
+  const [actions, setActions] = useState<boolean>(false);
 
   const values = {
     currentPoint,
-    point,
     completed,
+    completedItem,
     isStarted,
+    actions,
     setCurrentPoint,
-    setPoint,
     setCompleted,
+    setCompletedItem,
     setIsStarted,
+    setActions,
   };
+
+  console.log(values);
 
   return <Context.Provider value={values}>{children}</Context.Provider>;
 };

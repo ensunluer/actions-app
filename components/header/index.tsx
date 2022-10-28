@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useContextHook } from "../../context/Context";
 
 export const Header = () => {
-  const point = 5000;
+  const { currentPoint } = useContextHook();
 
   return (
     <header className="header-container">
@@ -16,7 +17,7 @@ export const Header = () => {
       </Link>
       <div className="header--point">
         <a href="/points">Points: </a>
-        <span>{point}</span>
+        <span>{currentPoint}</span>
       </div>
     </header>
   );

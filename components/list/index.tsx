@@ -1,6 +1,9 @@
+//hook
 import { useState } from "react";
 import { useContextHook } from "../../context/Context";
+//component
 import { Dialog } from "../dialog";
+//types
 import { IListItem, ListItem } from "../list-item";
 
 export interface IItems {

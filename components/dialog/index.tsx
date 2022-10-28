@@ -1,5 +1,6 @@
-import { useState } from "react";
+//hook
 import { useContextHook } from "../../context/Context";
+//component
 import { Modal } from "../modal";
 
 export const Dialog = ({ image, point, id }: any) => {

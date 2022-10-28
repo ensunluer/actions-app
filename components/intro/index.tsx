@@ -1,5 +1,8 @@
+//next
 import Image from "next/image";
+//hook
 import { useContextHook } from "../../context/Context";
+//component
 import { Modal } from "../modal";
 
 export const Intro = () => {

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 
 type Children = {
   children?: React.ReactNode;
@@ -10,7 +10,6 @@ export const ContextProvider: React.FC<Children> = ({ children }) => {
   const [currentPoint, setCurrentPoint] = useState<number>(0);
   const [completed, setCompleted] = useState<boolean>(false);
   const [completedItem, setCompletedItem] = useState<any[]>([]);
-  // const completedItem: number[] = [];
   const [isStarted, setIsStarted] = useState<boolean>(false);
   const [actions, setActions] = useState<boolean>(false);
 

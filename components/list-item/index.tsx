@@ -4,14 +4,14 @@ export interface IListItem {
   id?: number;
   title: string;
   description?: string;
-  point?: number | string;
+  point?: number | string;
   image: string;
   onClick?: () => void;
 }
 
 export const ListItem = (items: IListItem) => {
   const { title, description, point, image, onClick } = items;
-  
+
   return (
     <div className="list-item-container" onClick={onClick}>
       <div className="list-item--image">

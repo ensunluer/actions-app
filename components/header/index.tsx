@@ -1,5 +1,7 @@
+//next
 import Link from "next/link";
 import Image from "next/image";
+//hook
 import { useContextHook } from "../../context/Context";
 
 export const Header = () => {

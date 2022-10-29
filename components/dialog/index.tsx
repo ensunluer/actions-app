@@ -1,9 +1,10 @@
 //hook
 import { useContextHook } from "../../context/Context";
+import { IListItem } from "../list-item";
 //component
 import { Modal } from "../modal";
 
-export const Dialog = ({ image, point, id }: any) => {
+export const Dialog = ({ title, image, point, id, description }: IListItem) => {
   const {
     completed,
     setCompleted,
@@ -31,8 +32,8 @@ export const Dialog = ({ image, point, id }: any) => {
       <div className="dialog-container">
         {!completed ? (
           <Modal
-            title="Phasellus et sem eget"
-            subTitle="Lorem ipsum dolor sit amet consectetur"
+            title={title}
+            description={description}
             button="Earn points"
             image={image}
             point={point}
@@ -41,7 +42,7 @@ export const Dialog = ({ image, point, id }: any) => {
         ) : (
           <Modal
             title="Congratulations!"
-            subTitle="You've earned points for your participation! 
+            description="You've earned points for your participation! 
             Keep Up the great work!"
             button="Close"
             image="/Vector.svg"

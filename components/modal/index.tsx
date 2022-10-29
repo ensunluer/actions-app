@@ -1,18 +1,18 @@
 import Image from "next/image";
 
-interface IModal {
+export interface IModal {
   image?: string;
   title: string;
-  subTitle: string;
+  description?: string;
   button: string;
-  point?: number;
+  point?: number | string | undefined;
   onClick: () => void;
 }
 
 export const Modal = ({
   image,
   title,
-  subTitle,
+  description,
   button,
   point,
   onClick,
@@ -28,10 +28,10 @@ export const Modal = ({
           height={72}
         />
       )}
-      {point && <div className="modal--point">{`+${point}`}</div>}
+      {point && <div className="modal--point">{`+${point} Points`}</div>}
       <div className="modal--content">
         <div className="modal--title">{title}</div>
-        <div className="modal--subTitle">{subTitle}</div>
+        <div className="modal--subTitle">{description}</div>
       </div>
       <button onClick={onClick} className="modal--button">
         {button}

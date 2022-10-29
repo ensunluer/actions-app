@@ -25,9 +25,15 @@ export const List = ({ items }: IItems) => {
         <>
           {items
             .filter((id) => id.id === singleId)
-            .map(({ image, point, id }: IListItem) => (
+            .map(({ image, point, id, title, description }: IListItem) => (
               <div key={id}>
-                <Dialog image={image} point={point} id={id} />
+                <Dialog
+                  image={image}
+                  point={point}
+                  id={id}
+                  title={title}
+                  description={description}
+                />
               </div>
             ))}
         </>
